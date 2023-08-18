@@ -38,8 +38,8 @@ app.get("/bmicalculator", (req, res) => {
 });
 
 app.post("/bmicalculator", (req, res) => {
-  let weight = Number(req.body.weight);
-  let height = Number(req.body.height) / 100;
+  let weight = parseFloat(req.body.weight);
+  let height = parseFloat(req.body.height) / 100;
   let color;
   let type;
   let bmi = (weight / height ** 2).toFixed(2);
