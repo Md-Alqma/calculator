@@ -30,7 +30,7 @@ app.post("/calculator", (req, res) => {
     result = num1 + num2;
   }
 
-  res.send("The result is " + result);
+  res.send(`<h1 style="text-align:center">The result is ${result}</h1>`);
 });
 
 app.get("/bmicalculator", (req, res) => {
@@ -56,7 +56,7 @@ app.post("/bmicalculator", (req, res) => {
   }
 
   res.send(
-    `<h4 style=background-color:${color};>Your BMI is ${bmi}, You are ${type}</h4>`
+    `<h1 style="background-color:${color}; text-align:center;">Your BMI is ${bmi}, You are ${type}</h1>`
   );
 });
 
