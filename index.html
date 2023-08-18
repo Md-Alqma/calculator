@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
   </head>
-  <body style="text-align: center">
-    <h1>Calculator</h1>
-    <form action="/" method="post">
-      <input type="number" name="num1" placeholder="First Number" />
-      <input type="number" name="num2" placeholder="Second Number" />
-      <select name="type">
-        <option value="add">Add (+)</option>
-        <option value="sub">Subtract (-)</option>
-        <option value="mul">Multiply (*)</option>
-        <option value="div">Divide (/)</option>
-      </select>
-      <button type="submit">Calculate</button>
-    </form>
+  <body>
+    <nav style="display: flex; justify-content: space-evenly">
+      <a href="/calculator"><h2>Calculator</h2></a>
+      <a href="/bmiCalculator"><h2>BMI Calculator</h2></a>
+    </nav>
+    <main style="text-align: center; margin-top: 50px">
+      <h2>About</h2>
+      <h3 style="margin-bottom: 0">This Website contains two web apps.</h3>
+      <div style="text-align: center">
+        <ol style="display: inline-block; text-align: left">
+          <li>Simple Calcolator</li>
+          <li>BMI Calculator</li>
+        </ol>
+      </div>
+      <h4>
+        You can click on any of the link above to go to the particular web app.
+      </h4>
+    </main>
+    <footer style="position: absolute; bottom: 50px; left: 40%">
+      <p>Thank you for using this website. Please visit again.</p>
+      <p>Copyright @2023. All right reserved.</p>
+    </footer>
   </body>
 </html>
