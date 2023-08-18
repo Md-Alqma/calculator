@@ -29,6 +29,33 @@ app.post("/", (req, res) => {
   res.send("The result is " + result);
 });
 
+app.get("/bmicalculator", (req, res) => {
+  res.sendFile(__dirname + "/bmiCalculator.html");
+});
+
+app.post("/bmicalculator", (req, res) => {
+  let weight = Number(req.body.weight);
+  let height = Number(req.body.height) / 100;
+  let color;
+  let type;
+  let bmi = (weight / height ** 2).toFixed(2);
+
+  if (bmi > 18.5 && bmi < 25) {
+    color = "green";
+    type = "Normal";
+  } else if (bmi < 18.5) {
+    color = "yellow";
+    type = "Underweight";
+  } else {
+    color = "red";
+    type = "Overweight";
+  }
+
+  res.send(
+    `<h4 style=background-color:${color};>Your BMI is ${bmi}, You are ${type}</h4>`
+  );
+});
+
 app.listen(PORT, (req, res) => {
   console.log(`listening on port ${PORT}`);
 });
